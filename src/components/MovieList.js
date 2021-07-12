@@ -9,9 +9,9 @@ function MovieList() {
   const [moviesData, setMoviesData] = useState(moviesDataJSON);
   const [movies, setMovies] = useState(moviesDataJSON);
 
-  const addNewMovie = (movie) => {
-    const updatedMoviesData = [...moviesData, movie];
-    const updatedMovies = [...movies, movie];
+  const addNewMovie = (newMovie) => {
+    const updatedMoviesData = [...moviesData, newMovie];
+    const updatedMovies = [...movies, newMovie];
 
     setMoviesData(updatedMoviesData);
     setMovies(updatedMovies);
