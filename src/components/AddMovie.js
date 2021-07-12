@@ -6,33 +6,21 @@ function AddMovie(props) {
   const [IMDBRating, setIMDBRating] = useState(5);
   const [hasOscars, setHasOscars] = useState(true);
 
-  const handleTitleInput = (e) => {
-    setTitle(e.target.value);
-  };
+  const handleTitleInput = (e) => setTitle(e.target.value);
 
-  const handleDirectorInput = (e) => {
-    setDirector(e.target.value);
-  };
+  const handleDirectorInput = (e) => setDirector(e.target.value);
 
-  const handleRatingInput = (e) => {
-    setIMDBRating(e.target.value);
-  };
+  const handleRatingInput = (e) => setIMDBRating(e.target.value);
 
-  const handleOscarsInput = (e) => {
-    setHasOscars(e.target.checked); // boolean `checked` value from the `checkbox`
-  };
+  // boolean value `checked` from the `checkbox` input
+  const handleOscarsInput = (e) => setHasOscars(e.target.checked);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const state = {
-      title,
-      director,
-      IMDBRating,
-      hasOscars,
-    };
+    const newMovie = { title, director, IMDBRating, hasOscars };
 
-    // console.log("Form submitted", state);
-    props.addMovie(state);
+    console.log("Form Submitted", newMovie);
+    props.addMovie(newMovie);
 
     // Reset the state
     setTitle("");

@@ -30,20 +30,6 @@ function MovieList() {
     setMovies(filteredMovies);
   };
 
-  // const filterMovieList = (str) => {
-
-  //   if (str === "") {
-  //     setMovies(moviesData);
-  //     return;
-  //   }
-
-  //   const filteredMovies = moviesData.filter((movie) => {
-  //     return movie.title[0].toLowerCase() === str.toLowerCase();
-  //   });
-
-  //   setMovies(filteredMovies);
-  // };
-
   return (
     <div>
       <FilterMovies filterMovies={filterMovieList} />
