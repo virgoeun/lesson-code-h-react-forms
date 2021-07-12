@@ -15,24 +15,10 @@ function AddMovie(props) {
   // boolean value `checked` from the `checkbox` input
   const handleOscarsInput = (e) => setHasOscars(e.target.checked);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newMovie = { title, director, IMDBRating, hasOscars };
-
-    console.log("Form Submitted", newMovie);
-    props.addMovie(newMovie);
-
-    // Reset the state
-    setTitle("");
-    setDirector("");
-    setIMDBRating(5);
-    setHasOscars(false);
-  };
-
   return (
     <div className="AddMovie">
       <h4>Add a Movie</h4>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>Title:</label>
         <input type="text" name="title" value={title} onChange={handleTitleInput} />
 
