@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 function AddMovie(props) {
+  console.log("AddMovie Props:", props)
+  
   const [title, setTitle] = useState("");
   const [director, setDirector] = useState("");
   const [IMDBRating, setIMDBRating] = useState(5);

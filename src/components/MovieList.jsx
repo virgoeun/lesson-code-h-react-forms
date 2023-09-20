@@ -33,7 +33,8 @@ function MovieList() {
   return (
     <div>
       <FilterMovies filterMovies={filterMovieList} />
-      <AddMovie addMovie={addNewMovie} />
+      <AddMovie key="add-movie" addMovie={addNewMovie} />
+     
       {movies.map((movie) => {
         return <MovieCard key={movie._id} movie={movie} />;
       })}
